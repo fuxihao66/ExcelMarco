@@ -8,7 +8,7 @@ Sub merge()
     TotalRowNum = InputBox("Enter row num:")
     
     Do While i <= TotalRowNum
-        If Cells(i, f).Text = "#N/A" Then
+        If Cells(i, f).Text = "" Then
             Range(Cells(i - 1, f), Cells(i, f)).merge
             
         End If

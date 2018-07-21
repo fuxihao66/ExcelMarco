@@ -1,0 +1,12 @@
+Sub depart()
+    Dim c As Range
+    With Selection
+        For Each c In Selection
+            If c.MergeCells Then
+                c.Select
+                c.UnMerge
+                Selection.Value = c.Value
+            End If
+        Next c
+    End With
+End Sub
