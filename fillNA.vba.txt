@@ -1,0 +1,10 @@
+Sub fillNA()
+    Dim f As Integer
+            
+    f = InputBox("Enter row to fill:")
+    For i = 2 To 20
+        If Cells(i, f).Text = "#N/A" Then
+            Cells(i, f) = 0
+        End If
+    Next i
+End Sub

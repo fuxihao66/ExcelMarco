@@ -1,0 +1,17 @@
+Sub merge()
+    Dim f As Integer
+    Dim TotalRowNum As Integer
+    Dim i As Integer
+    
+    i = 2
+    f = InputBox("Enter row to merge:")
+    TotalRowNum = InputBox("Enter row num:")
+    
+    Do While i < 20
+        If Cells(i, f).Text = "#N/A" Then
+            Range(Cells(i - 1, f), Cells(i, f)).merge
+            
+        End If
+        i = i + 1
+    Loop
+End Sub
